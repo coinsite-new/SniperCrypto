@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #06060a;
+  --card-bg: #0d0d14;
+  --purple: #6366f1;
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.menu-item {
+  @apply flex items-center gap-3 px-4 py-4 text-gray-300 hover:bg-white/5 rounded-lg cursor-pointer transition-colors;
+}
+
+.menu-item .content {
+  @apply flex-1;
+}
+
+.menu-item.active {
+  @apply bg-white/5 text-white;
+}
+
+.menu-item .description {
+  @apply text-sm text-gray-500 mt-1;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2;
+}
+
+.btn-twitter {
+  @apply bg-white/90 text-black hover:bg-white;
+}
+
+.btn-phantom {
+  @apply bg-purple text-white hover:bg-purple-90;
+}
+
+.version-tag {
+  @apply text-xs text-gray-500 px-2 py-1 rounded bg-white/5;
+}
